@@ -23,7 +23,7 @@ Desktop.ini
 
 # Node.js 依赖及常见构建输出
 node_modules/
-dist/
+# 本项目 dist/ 是需提交的静态网站源码，保留跟踪。
 build/
 coverage/
 .next/
