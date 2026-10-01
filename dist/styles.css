@@ -18,4 +18,4 @@
 .studio-caption{display:flex;justify-content:space-between;gap:16px;margin-top:14px;color:var(--muted);font-size:12px;line-height:1.8}
 .studio-caption span{font-size:12px;letter-spacing:1px;text-align:right}
 @media(max-width:700px){.studio-collage{margin-top:26px}.studio-photo-main{width:92%}.studio-photo-detail{width:72%;margin-top:-23px;border-width:6px}.studio-caption{gap:10px}.studio-caption span{letter-spacing:.3px}.about-section{gap:28px}}
-.featured-cover{width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:16px}.services{margin-top:32px}
+.featured-cover{width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:var(--surface);margin-bottom:16px}.services{margin-top:32px}
