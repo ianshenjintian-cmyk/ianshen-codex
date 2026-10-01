@@ -1,0 +1,45 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 编辑器本地配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境变量和本地凭据
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# 日志
+*.log
+
+# Node.js 依赖及常见构建输出
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+
+# Python 虚拟环境及缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 临时文件
+.tmp/
+.cache/
