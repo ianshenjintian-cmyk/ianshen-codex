@@ -2,7 +2,7 @@
   "use strict";
   const grid = document.querySelector("#work-grid");
   const dialog = document.querySelector("#work-dialog");
-  const categoryLabels = { music: "MUSIC / 音乐作品", screen: "SCREEN / 影视项目", stage: "STAGE / 舞台与综艺" };
+  const categoryLabels = { music: "MUSIC / 音乐作品", screen: "OST / 影视歌曲与 OST", stage: "STAGE / 舞台与综艺" };
   let lastTrigger = null;
   const element = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -43,6 +43,7 @@
     document.querySelector("#detail-description").textContent = work.description;
     document.querySelector("#detail-origin").textContent = `资料来源：${work.origin}`;
     const source = document.querySelector("#detail-source");
+    source.textContent = work.sourceLabel || "查看公开署名";
     source.hidden = !work.source;
     if (work.source) source.href = work.source;
     else source.removeAttribute("href");
@@ -64,7 +65,7 @@
       grid.append(button);
     });
     document.querySelector("#work-announcement").textContent = `显示${categoryLabels[category].split(" / ")[1]}，共 ${portfolioData[category].length} 个项目。`;
-    document.querySelector("#work-footnote").textContent = category === "music" ? "精选作品与岗位整理自个人履历及已核实的公开署名。" : "项目参与信息整理自个人履历；详细曲目与岗位可在合作沟通时进一步提供。";
+    document.querySelector("#work-footnote").textContent = category === "music" ? "精选作品与岗位整理自个人履历及已核实的公开署名。" : category === "screen" ? "OST 专辑与影视歌曲，按实际参与整理制作岗位。" : "项目参与信息整理自个人履历；详细曲目与岗位可在合作沟通时进一步提供。";
   }
   document.querySelectorAll(".filter").forEach(button => {
     button.querySelector("span").textContent = String(portfolioData[button.dataset.filter].length).padStart(2, "0");
