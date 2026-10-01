@@ -120,6 +120,13 @@
     const button = element("button", "featured-credit");
     button.type = "button";
     button.setAttribute("aria-label", `${work.title}，查看制作信息`);
+    const cover = element("img", "featured-cover");
+    cover.src = work.image;
+    cover.alt = `${work.title}作品封面`;
+    cover.width = 600;
+    cover.height = 600;
+    cover.loading = "lazy";
+    button.append(cover);
     button.append(element("span", "", work.artist), element("strong", "", work.title), element("span", "featured-role", work.role));
     button.addEventListener("click", () => showDetail(work, "music", button));
     document.querySelector("#featured-credits").append(button);
